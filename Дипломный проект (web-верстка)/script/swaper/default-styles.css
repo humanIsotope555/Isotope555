@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+	font-size: 12px;
+}
+
+.card {
+	min-height: 300px;
+	color: #111;
+	font-size: 16px;
+}
+
+.slider-container {
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	background-color: #fff;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	outline: none;
+	transition: box-shadow 1s;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: none;
+}
+
+.swiper-button-prev {
+	background-image: url(../../svg/back.svg);
+}
+
+.swiper-button-prev:hover{
+	box-shadow: 6px 5px 4px 2px rgb(192, 192, 192, 0.7);
+}
+.swiper-button-next:hover{
+	box-shadow: 6px 5px 4px 2px  rgb(192, 192, 192, 0.7);
+}
+
+.swiper-button-next {
+	background-image: url(../../svg/right.svg);
+}
+
+@media (max-width: 1300px){
+	.swiper-button-prev {
+		display: none;
+	}
+	
+	.swiper-button-next {
+		display: none;
+	}
+}
+
+.slider-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.slider-buttons {
+	display: flex;
+	align-items: center;
+}
