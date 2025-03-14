@@ -1,0 +1,181 @@
+.link-task{
+    text-decoration: none;
+}
+
+.manual-base{
+    display: flex;
+    flex-direction: row;
+}
+
+.manual__block{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.manual__block-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 60px;
+  	margin-bottom: 15px;
+}
+
+
+.manual__title{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+
+.manual__container{
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    max-width: 1210px;
+    margin-bottom: 100px;
+}
+
+.manual-base{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.head-list{
+    padding: 20px 20px;
+}
+
+.list-symbol{
+    margin-bottom: 20px;
+}
+
+.item-elem{
+    padding: 5px 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.item-elem:hover{
+    background-color: #ff4e2e;
+}
+
+.item-elem:active{
+    background-color: #2196f3;
+}
+
+.item-selected{
+    background-color: #2196f3;
+}
+
+.mean{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.mean-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mean-body{
+    padding-left: 10px;
+}
+
+.mean__sybmol-body{
+
+}
+
+.sybmol-view{
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.example{
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.head-mean{
+    padding: 20px 20px;
+}
+
+.left-block-symbol{
+    background-color: white;
+    width: 400px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.right-block-mean{
+    background-color: white;
+    width: 800px;
+    border-radius: 20px;
+}
+
+.exercises__block{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+.exercises__exercise-block{
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.exercises__exercise-block:hover{
+    background-color: #2196f3;
+    transition: background-color 1s;
+}
+
+.exercises__block-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 60px;
+  	margin-bottom: 15px;
+}
+
+.exercises__title{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.exercises__exercise-title{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.exercises__text{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.exercises__article-block{
+    margin-bottom: 50px;
+}
+
+.exercises__exercise-block:last-child{
+    margin-bottom: 100px;
+}
+
+.exercise__text{
+    margin-right: 10px;
+}
+
+

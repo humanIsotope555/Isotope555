@@ -1,0 +1,27 @@
+@media(max-width: 1200px){
+    .menu-on{
+        display: none;
+    }
+
+    .menu__list{
+        position: relative;
+        background-color: #f9f9f9;
+
+        width: 100%;
+        padding: 20px 30px;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: 100;
+    }
+
+    .menu__link{
+        color: black;
+    }
+}
+
+@media(max-width: 800px){
+    .menu__list{
+        background-color: white;
+    }
+}

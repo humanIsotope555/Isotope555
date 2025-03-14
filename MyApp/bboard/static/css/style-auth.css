@@ -1,0 +1,123 @@
+.auth__title{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.button-auth{
+    background-color: #ff4e2e;
+    color: white;
+    width: 269px;
+    height: 60px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.auth__block-title{
+    margin-bottom: 20px;
+}
+
+.auth__block{
+    padding-left: 20px;
+}
+
+.block-auth{
+    width: 60%;
+
+}
+
+.field-other-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.field-other-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.input-reg-4{
+    margin-bottom: 20px;
+}
+
+.input-reg-5{
+    margin-bottom: 20px;
+}
+
+.field-reg{
+    display: flex;
+    flex-direction: row;
+}
+
+.reg-container{
+    flex-direction: column;
+}
+
+.left-panel{
+    width: 450px;
+}
+
+.right-panel{
+    width: 450px;
+}
+
+
+
+
+.link-reg{
+
+}
+
+.input-auth{
+    padding: 17px 0;
+    font-size: 15px;
+    width: 100%;
+}
+
+.head-auth{
+    margin-bottom: 10px;
+}
+
+.reg-block{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.gen-pass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-gen {
+  /*flex: 1 1 auto;*/
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn-gen:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-gen {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+}

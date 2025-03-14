@@ -1,0 +1,76 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <title>{% block title %}Title{% endblock title %}</title>
+    {% block style %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-articles-list.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-articles-detail.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-auth.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-blog.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-trainer.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-trainer-compile.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style-scroll.css' %}">
+      	<link rel="stylesheet" type="text/css" href="{% static 'css/style-preloader.css' %}">
+        <link type="image/x-icon" rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="{% static 'script/swaper/swiper.min.css' %}">
+        <link rel="stylesheet" href="{% static 'script/swaper/default-styles.css' %}">
+        <link rel="stylesheet" href="{% static 'script/swaper/style.css' %}">
+    {% endblock style %}
+</head>
+<body>
+<!--
+  <div class="area-for-preloader">
+    <div class="block-loader area-for-preloader__block-loader">
+      	<div class="block-animation block-loader__block-animation">
+          	<code class="bracket">[</code>
+            <div class="block-center">
+              <div class="block-up block-animation__block-up">
+                  <div class="circle">&lt;code&gt;</div>
+              </div>
+              <div class="block-down block-animation__block-down">
+                  <div class="rect rect1"></div>
+                  <div class="rect rect2"></div>
+                  <div class="rect rect3"></div>
+                  <div class="rect rect4"></div>
+              </div>
+          	</div>
+          	<code class="bracket">]</code>
+      	</div>
+    	<div class="text-loader block-loader__text-loader"><h1 class="text-head block-loader__text-head">Разработка ваших сайтов</h1></div>
+    </div>
+  </div>
+  -->
+
+{% block content %}
+{% endblock content%}
+
+{% block js %}
+    <script src ="{% static 'script/inputmask.min.js' %}"></script>
+    <script src ="{% static 'script/just-validate.min.js' %}"></script>
+    <!--<script src ="{% static 'script/valid.js' %}"></script>-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src ="{% static 'script/menu_mob.js' %}"></script>
+    <script src ="{% static 'script/scroll.js' %}"></script>
+    <script src ="{% static 'script/just-validate.min.js' %}"></script>
+    <script src ="{% static 'script/swaper/swiper.min.js' %}"></script>
+    <script src ="{% static 'script/swaper/slider.js' %}"></script>
+    <script src ="{% static 'script/anchor.js' %}"></script>
+    <script src ="{% static 'script/loader.js' %}"></script>
+    <script src ="{% static 'script/preloader.js' %}"></script>
+    <script src = "{% static 'script/generator.js' %}"></script>
+    <script src = "{% static 'script/scripts-compiler.js' %}"></script>
+    <script src = "{% static 'script/scripts-manual.js' %}"></script>
+{% endblock js %}
+
+
+</body>
+</html>

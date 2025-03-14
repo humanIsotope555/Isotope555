@@ -1,0 +1,127 @@
+.compiler__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.block-area{
+    width: 600px;
+    height: 200px;
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.result__block-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.result__alert{
+    padding-right: 5px;
+}
+
+.result-area{
+    padding: 10px;
+}
+
+.button-compile{
+    background-color: #ff4e2e;
+    color: white;
+    font-size: 18px;
+    width: 200px;
+    height: 60px;
+    border: 0;
+    transition: opacity 1s;
+
+}
+
+.block-enter{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#transfer-block {
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.transfer-header {
+  padding: 15px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+.compile__block{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+.compile__block-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 60px;
+  	margin-bottom: 15px;
+}
+
+.compile__title{
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.result__block{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    padding-top: 60px;
+}
+
+.result__block-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.result__title{
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.wrapper-result{
+     background-color: #ff4e2e;
+     box-shadow: 0 2px 6px rgba(0,0,0,.1);
+     border-radius: 5px;
+}
+
+.result-area{
+    width: 400px;
+    height: 190px;
+    border-radius: 0 0 5px 5px;
+    background-color: white;
+}
+
+@media(max-width: 1060px){
+
+}

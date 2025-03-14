@@ -1,0 +1,250 @@
+{% extends "index.html" %}
+{% load static %}
+
+<html lang="ru">
+    <head>
+        <title>{% block title %}Какой-то сайт{% endblock title%}</title>
+
+    </head>
+<body>
+
+   {% include 'mail_send.html' %}
+    {% block content %}
+
+    <header class="header">
+        <div class="header-container fixed-container join-container">
+            <nav class="menu header__menu ">
+                <div class="menu-on header__menu-on">
+                    <div class="top menu-on__top"></div>
+                    <div class="middle menu-on__middle"></div>
+                    <div class="bottom menu-on__bottom"></div>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#mywork">Услуги</a></li>
+                    <li class="menu__item"><a class="menu__link_red menu__link" href="#projects">Портфолио</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#cost">Стоимость</a></li>
+                </ul>
+            </nav>
+            <div class="header__right-bar">
+
+                <div class="call header__call">
+                    <a class ="number header__number" href="tel:+">
+                        [ Телефон ]
+                    </a>
+
+                    <button class="button header__button" >
+                        Заказать звонок
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+
+        <div class="main__container fixed-container join-container">
+            <div class="main__myinfo">
+                <h1 class="main__name">В разработке</h1>
+                <p class="main__prof">Что-то...</p>
+                <div class="main__info">
+                    <button class="button main__more">Узнать больше</button>
+                    <a href="{% url 'blog' %}">
+                        <button class="button main__blog">Мой&nbsp;&nbsp;&lt;&nbsp;блог&nbsp;&gt;</button>
+                    </a>
+                    <a href="{% url 'trainer' %}">
+                        <button class="button main__blog">Тренажер [ regexp ]</button>
+                    </a>
+                </div>
+            </div>
+            <div class="right-block">
+                <div class="wrapper-scrum right-block__wrapper-scrum">
+                    <a href="{% url 'scrum' %}">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        SCRUM <sup>Попробовать</sup>
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="mywork" id="mywork">
+        <div class="photo-container join-container work-container">
+            <h2 class="do mywork__do">
+                Что я делаю
+            </h2>          
+            <ul class="view mywork__view">                
+                <li class="item view__item view__item1">
+                    <p class="item__text">
+                        Вёрстка лендинг<span class="def">_</span>страниц
+                        и сайтов любой сложности
+                    </p>
+                </li>
+                <li class="item view__item view__item2">                      
+                    <p class="item__text">
+                        Адаптивная вёрстка под все
+                        браузеры и устройства
+                    </p>
+                </li>         
+                <li class="item view__item view__item3">                
+                    <p class="item__text">
+                        Frontend <span class="def">_</span> разработка
+                        и программирование
+                    </p>
+                </li>
+
+                <li class="item view__item view__item4">
+                    <p class="item__text">
+                        Исправление и доработка
+                        существующей вёрстки
+                    </p>
+                </li>          
+            </ul>
+            <button class="mywork__more button">
+                Узнать стоимость
+            </button>
+        </div>
+    </section>
+    
+    <section class="projects" id="projects">  
+        <div class="slider-container projects__slider-container join-container fixed-container">
+            <h2 class="exp slider-container__exp">
+                Примеры моих работ
+            </h2>
+            <div class="swiper-container slider-container__swiper-container">
+                <div class="swiper-wrapper swiper-container__swiper-wrapper">
+                    <!--
+                    <div class="swiper-slide card swiper-wrapper__swiper-slide">
+                        <img class="img swiper-slide__img" src ="{% static 'img/11.png' %}" alt="screen 1">
+                        <span class="text swiper-slide__text">Мой сайт</span>
+                    </div>
+                    -->
+                    <div class="swiper-slide card">
+                        <img class="img swiper-slide__img" src ="{% static 'img/22.png' %}" alt="screen 2">
+                        <span class="text swiper-slide__text">Сайт новостей</span>
+                    </div>
+                    <div class="swiper-slide card">
+                        <img class="img swiper-slide__img" src ="{% static 'img/33.png' %}" alt="screen 3">
+                        <span class="text swiper-slide__text">Сайт списка дел</span>
+                    </div>
+                    <!--
+                    <div class="swiper-slide card">
+                        <img class="img swiper-slide__img" src ="{% static 'img/44.png' %}" alt="screen 4">
+                        <span class="text swiper-slide__text">Сайт IT компании</span>
+                    </div>
+                    -->
+                </div>
+                            
+            </div>
+            <div class="swiper-pagination slider-container__swiper-pagination"></div>
+            <button class="swiper-button-prev slider-container__swiper-button-prev">&nbsp;</button>
+            <button class="swiper-button-next  slider-container__swiper-button-next">&nbsp;</button>
+            
+            <button class="order slider-container__order button">
+                Заказать проект
+            </button>
+        </div>     
+    </section>
+
+    <section class="cost" id="cost">
+
+        <div class="cost__container fixed-container join-container">
+            <div class="board cost__board">
+                <h2 class="head main__head">
+                Адаптивная вёрстка под все
+                устройства и браузеры от 1000
+                рублей всего за 4 часа.*
+                </h2>
+            </div>
+            
+            <span class="cost__other">
+        
+                * Срок и стоимость могут отличаться
+                от заявленных и рассчитываются
+                индивидуально, в зависимости от 
+                сложности задач.
+                
+            </span>
+        </div>
+    </section>
+
+        <footer class="footer">
+        <div class="bar footer__bar footer-container join-container fixed-container">
+            <nav class="menu bar__menu">
+                <ul class="list-footer menu__list-footer">
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#mywork">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#projects">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#cost">
+                            Стоимость
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="addr bar__addr">
+                <div class="call addr__call">
+                    <a class="tel call__tel" href="tel:+">
+                    [ Телефон ]
+                    </a>
+                </div>
+                <div class=" mail addr__mail">
+                    <a href="malto:" class="mail__link">
+                        [ Почта ]
+                    </a>
+                </div>
+
+            </address>
+
+            <div class="order-links bar__order-links">
+                <button class="order order-links__order button">
+                    Заказать звонок
+                </button>
+                <ul class="list order-links__list">
+                    <li class="vk list__vk list__style">
+                        <!--
+                        <a class="link-net vk__link-net" href="" target="_blank">&nbsp;</a>
+                        -->
+                    </li>
+                    <li class="f list_f list__style">
+                        <!--
+                        <a class="link-net f__link-net" href="" target="_blank">&nbsp;</a>
+                        -->
+                    </li>
+                    <li class="g list__g list__style">
+                        <!--
+                        <a class="link-net g__link-net" href="" target="_blank">&nbsp;</a>
+                        -->
+                    </li>
+                    <li class="i list__i list__style">
+                        <!--
+                        <a class="link-net i__link-net" href="https://www.instagram.com/alexrayey_kirilov/" target="_blank">&nbsp;</a>
+                        -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="law footer__law">
+            <div class="author law__author footer-container join-container">
+                <p class="author__text">
+                    &copy;&nbsp;[ Имя ], 2020 <span class="def text__def">_</span> 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+    {% endblock content %}
+
+</body>
+</html>

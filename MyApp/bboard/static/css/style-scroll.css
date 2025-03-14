@@ -1,0 +1,8 @@
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}

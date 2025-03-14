@@ -1,0 +1,197 @@
+{% extends 'index.html' %}
+{% load static %}
+
+<html lang="ru">
+    <head>
+        {% block title %}Тренажер RegExp{% endblock title %}
+    </head>
+<body>
+
+    {% block content %}
+
+    <!-- Перетаскиваемый DIV -->
+    <div id="transfer-block">
+      <!-- Включите заголовок DIV с тем же именем, что и перетаскиваемый DIV, а затем "header" -->
+      <div class="transfer-header transfer-block__transfer-header">Нажмите здесь, чтобы переместить</div>
+      <table>
+        <tr>
+            <td>
+                <div>
+                    Задание
+                </div>
+            </td>
+            <td align="center">
+                <div class="task-block transfer-block__task-block">
+                    {{context.task}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    Пример
+                </div>
+            </td>
+            <td align="center">
+                <div class="example-block transfer-block__example-block">
+                    {{context.example}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    Ответ
+                </div>
+            </td>
+            <td align="center">
+                <div class="answer-block transfer-block__answer-block">
+                    {{context.answer}}
+                </div>
+            </td>
+        </tr>
+          </tr>
+      </table>
+    </div>
+
+     <header class="header">
+        <div class="header-container fixed-container join-container">
+            <nav class="menu header__menu ">
+                <div class="menu-on header__menu-on">
+                    <div class="top menu-on__top"></div>
+                    <div class="middle menu-on__middle"></div>
+                    <div class="bottom menu-on__bottom"></div>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="{% url 'base' %}">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link_red menu__link" href="{% url 'manual' %}">Справочник</a></li>
+                    <li class="menu__item"><a class="menu__link" href="{% url 'trainer' %}">Упражнения</a></li>
+                </ul>
+            </nav>
+            <div class="header__right-bar">
+
+                <div class="call header__call">
+                    <a class="find menu-right__find">
+                        <img class="find-img find__find-img" src="{% static 'img/icon-search.png' %}">
+                    </a>
+
+                    <button class="button header__button" >
+                        Войти/Регистрация
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+
+        <div class="compiler__container fixed-container join-container">
+            <div class="compile__block">
+                <div class="compile__block-title">
+                    <h1 class="compile__title"></h1>
+
+                </div>
+                <div class="wrapper-area">
+                    <form class="form-area" id="form-send-regex" method="POST">
+                        {% csrf_token %}
+                        <div class="block-enter">
+                            <textarea class="block-area" name="regexp"
+                                      autofocus
+                                        placeholder="Введите RegExp..."></textarea>
+                            <button class="button button-compile" type="submit">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="result__block">
+                <div class="wrapper-result">
+                    <div class="result__block-title">
+                        <span class="result__title">Результат вашего RegExp</span>
+                        <span class="result__alert">{{res}}</span>
+                    </div>
+                    <div class="result-area">
+                        <span class="result-text">{{answer}}</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="bar footer__bar footer-container join-container fixed-container">
+            <nav class="menu bar__menu">
+                <ul class="list-footer menu__list-footer">
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#mywork">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#projects">
+                            Что нового
+                        </a>
+                    </li>
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#cost">
+                            Тренажер [ regexp ]
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="addr bar__addr">
+                <div class="call addr__call">
+                    <a class="tel call__tel" href="tel:+">
+                    [ Телефон ]
+                    </a>
+                </div>
+                <div class=" mail addr__mail">
+                    <a href="malto:Lexa_163_96@mail.ru" class="mail__link">
+                        [ Почта ]
+                    </a>
+                </div>
+
+            </address>
+
+            <div class="order-links bar__order-links">
+                <button class="order order-links__order button">
+                    Заказать звонок
+                </button>
+                <ul class="list order-links__list">
+                    <li class="vk list__vk list__style">
+                        <a class="link-net vk__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                    <li class="f list_f list__style">
+                        <a class="link-net f__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                    <li class="g list__g list__style">
+                        <a class="link-net g__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                    <li class="i list__i list__style">
+                        <a class="link-net i__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="law footer__law">
+            <div class="author law__author footer-container join-container">
+                <p class="author__text">
+                    &copy;&nbsp;[ Имя ], 2020 <span class="def text__def">_</span> 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    {% endblock content %}
+
+  </body>
+</html>

@@ -1,0 +1,132 @@
+{% extends 'index.html' %}
+{% load static %}
+
+<html lang="ru">
+    <head>
+        {% block title %}Блог{% endblock title %}
+    </head>
+<body>
+
+    {% block content %}
+
+     <header class="header">
+        <div class="header-container fixed-container join-container">
+            <nav class="menu header__menu ">
+                <div class="menu-on header__menu-on">
+                    <div class="top menu-on__top"></div>
+                    <div class="middle menu-on__middle"></div>
+                    <div class="bottom menu-on__bottom"></div>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="{% url 'base' %}">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link_red menu__link" href="#projects">Что нового</a></li>
+                    <li class="menu__item"><a class="menu__link" href="{% url 'trainer' %}">Тренажер [ regexp ]</a></li>
+                </ul>
+            </nav>
+            <div class="header__right-bar">
+
+                <div class="menu-right header__menu-right">
+                    <a class="find menu-right__find">
+                        <img class="find-img find__find-img" src="{% static 'img/icon-search.png' %}">
+                    </a>
+                    <a href="">
+                        <button class="button header__button" >
+                            Войти/Регистрация
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="photo">   
+
+        <div class="photo__container fixed-container join-container">
+            <div class="articles__block">
+                <div class="articles__block-title">
+                    <h1 class="articles__title">Статьи</h1>
+
+                </div>
+                    {% for item in context %}
+                        <div class="articles__article-block">
+                            <h2 class="articles__article-title">{{item.title}}</h2>
+                            <p class="articles__text">{{item.body|truncatewords:2}}</p>
+                            <a class="articles__link" href="{% url 'post_detail' item.pk %}">
+                                <button class="button articles__more">Узнать больше</button>
+                            </a>
+                        </div>
+                    {% endfor %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="bar footer__bar footer-container join-container fixed-container">
+            <nav class="menu bar__menu">
+                <ul class="list-footer menu__list-footer">
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#mywork">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#projects">
+                            Что нового
+                        </a>
+                    </li>
+                    <li class="item list-footer__item">
+                        <a class="link item__link" href="#cost">
+                            Тренажер [ regexp ]
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="addr bar__addr">
+                <div class="call addr__call">
+                    <a class="tel call__tel" href="tel:+">
+                    [ Телефон ]
+                    </a>
+                </div>
+                <div class=" mail addr__mail">
+                    <a href="malto:" class="mail__link">
+                        [ Почта ]
+                    </a>
+                </div>
+
+            </address>
+
+            <div class="order-links bar__order-links">
+                <button class="order order-links__order button">
+                    Заказать звонок
+                </button>
+                <ul class="list order-links__list">
+                    <li class="vk list__vk list__style">
+                        <a class="link-net vk__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                    <li class="f list_f list__style">
+                        <a class="link-net f__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                    <li class="g list__g list__style">
+                        <a class="link-net g__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                    <li class="i list__i list__style">
+                        <a class="link-net i__link-net" href="" target="_blank">&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="law footer__law">
+            <div class="author law__author footer-container join-container">
+                <p class="author__text">
+                    &copy;&nbsp;[ Имя ], 2020 <span class="def text__def">_</span> 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+    {% endblock content %}
+
+  </body>
+</html>
