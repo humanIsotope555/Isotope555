@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {Component, useState, useEffect, } from 'react';
+import React, {Component, useState, useEffect, useContext} from 'react';
+import {globalContext} from '../../app/App'
 
 export const AnswerBlock = (props) => {
 

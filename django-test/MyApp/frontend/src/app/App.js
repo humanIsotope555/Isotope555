@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createContext } from 'react';
 import logo from '../theme/logo.svg';
 import '../theme/App.css';
 import axios from 'axios';
@@ -11,6 +11,9 @@ import {RegExp, } from '../components/site/regexp';
 import {Trainer, } from '../components/site/templates/trainer';
 import {Post, } from '../components/site/templates/post';
 import {Manual, } from '../components/site/manual';
+
+import '../api/csrf-token'
+
 
 var arr = []
 
@@ -25,10 +28,14 @@ async function getUser() {
 
 }
 getUser()
+
+export const globalContext = createContext({counter: 1})
+
 class App extends Component {
   render() {
     return (
       <div className="App">
+      <globalContext.Provider value={{counter: 1}}>
         <BrowserRouter>
             <Routes>
                 <Route path="" element={<Main />} />
@@ -43,6 +50,7 @@ class App extends Component {
 
             </Routes>
         </BrowserRouter>
+        </globalContext.Provider>
       </div>
     );
   }
