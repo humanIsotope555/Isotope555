@@ -2,6 +2,7 @@ import {Header, } from '../../components/common/header';
 import {Footer, } from '../../components/common/footer';
 import {LinkPage, } from '../../components/button/button_link';
 import {Task, } from '../item/task';
+import {ButtonSend, } from '../../components/button/button_send';
 
 import axios from 'axios'
 import React, {Component, useEffect, useState} from 'react';
@@ -51,11 +52,14 @@ const BuildPage = () => {
     const link_proj = <LinkPage class="menu__link" link="/manual/point"
                                     name="Справочник" />
 
+    const button_send = <ButtonSend name="Войти/Регистрация" />
+
   return(
       <>
           <Header first_link={link_serv}
                    second_link={link_cost}
-                   third_link={link_proj}/>
+                   third_link={link_proj}
+                   button_send={button_send} />
            <section class="main">
 
                 <div class="main__container fixed-container join-container">

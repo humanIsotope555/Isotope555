@@ -3,6 +3,7 @@ import {Footer, } from '../../components/common/footer';
 import {LinkPage, } from '../../components/button/button_link';
 import {SymbolList, } from '../../components/menu/symbol-list';
 import {SymbolDetail, } from '../../components/layout-block/symbol-detail'
+import {ButtonSend, } from '../../components/button/button_send';
 
 import {SendMessage, } from '../../containers/SendMessage';
 import {ResultMessage, } from '../../containers/ResultMessage';
@@ -27,11 +28,14 @@ export const ChatBot = () => {
     const link_proj = <LinkPage class="menu__link" link="/regexp"
                                     name="RegExp" />
 
+    const button_send = <ButtonSend name="Войти/Регистрация" />
+
     return(
         <>
              <Header first_link={link_serv}
                    second_link={link_cost}
-                   third_link={link_proj} />
+                   third_link={link_proj}
+                   button_send={button_send} />
 
              <section class="chatbot">
                 <div class="chatbot__container fixed-container join-container">

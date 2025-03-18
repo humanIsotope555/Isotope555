@@ -1,9 +1,9 @@
 export const ButtonSend = (props) => {
     return(
         <>
-            <button class={props.class} >
+            <div class={props.class} >
                 {props.name}
-            </button>
+            </div>
         </>
     )
 

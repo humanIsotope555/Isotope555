@@ -64,7 +64,7 @@ export const Header = (props) => {
 
                     </ul>
                 </nav>
-                <HeaderRightBar />
+                <HeaderRightBar send={props.button_send} />
             </div>
         </header>
 

@@ -14,9 +14,9 @@ export const Base = (props) => (
                 <div class="main__myinfo">
                     <h1 class="main__name">Заголовок</h1>
                     <p class="main__prof">Что-то...</p>
-                    {}
+
                     <div class="main__info">
-                        <ButtonSend class="button main__more" name="Узнать больше" />
+                        <ButtonMainLink class="button main__more" name="Узнать больше" />
                         <ButtonMainLink class="button main__menu-link"
                                         name = "Мой&nbsp;&nbsp;&lt;&nbsp;блог&nbsp;&gt;"
                                         link="/blog"

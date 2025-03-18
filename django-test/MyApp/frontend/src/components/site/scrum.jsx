@@ -24,6 +24,7 @@ export const Scrum = (props) => {
                     <Header  first_link={link_serv}
                             second_link={link_cost}
                             third_link={link_proj}
+                            button_send={button_send}
                             />
                </h1>
                 <section class="scrum">
