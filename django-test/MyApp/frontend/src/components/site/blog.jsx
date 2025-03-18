@@ -59,7 +59,7 @@ const BuildPage = () => {
     const link_proj = <LinkPage class="menu__link" link="/regexp"
                                     name="RegExp" />
 
-    const button_send = <ButtonSend name="Войти/Регистрация" />
+    const button_send = <ButtonSend name="Войти/Регистрация" href="/auth" />
 
 // var posts = ["Текст A", "Текст B", "Текст C", "Текст D"]
 

@@ -1,9 +1,12 @@
+import {Link, } from 'react-router-dom';
+
 export const ButtonSend = (props) => {
     return(
         <>
-            <div class={props.class} >
+
+            <Link class={props.class} to={props.href}>
                 {props.name}
-            </div>
+            </Link>
         </>
     )
 

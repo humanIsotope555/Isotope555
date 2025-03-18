@@ -13,6 +13,7 @@ import {ChatBot, } from '../components/site/chatbot';
 import {RegExp, } from '../components/site/regexp';
 import {Trainer, } from '../components/site/templates/trainer';
 import {Post, } from '../components/site/templates/post';
+import {Auth, } from '../components/site/templates/auth';
 import {Manual, } from '../components/site/manual';
 import {getCookie, } from '../api/csrf-token.js';
 import {apiService, } from'../api/api.js';
@@ -41,6 +42,7 @@ class App extends Component {
         <BrowserRouter>
             <Routes>
                 <Route path="" element={<Main />} />
+                <Route path="auth" element={<Auth />} />
                 <Route path="blog" element={<Blog />} />
                     <Route path="article/:id" element={<Post />} />
                 <Route path="regexp" element={<RegExp />} />

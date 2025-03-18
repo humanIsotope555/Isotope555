@@ -49,7 +49,7 @@ export const Trainer = (props) => {
     const link_proj = <LinkPage class="menu__link" link="/manual"
                                     name="Справочник" />
 
-    const button_send = <ButtonSend name="Войти/Регистрация" />
+    const button_send = <ButtonSend name="Войти/Регистрация" href="/auth"/>
 
     function RegExp(count, date){
         try{

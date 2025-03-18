@@ -5,17 +5,17 @@ import React, {useState} from 'react';
 
 export const HeaderRightBar = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-const openModal = () => {
-      setModalIsOpen(true);
-    };
+        const openModal = () => {
+          setModalIsOpen(true);
+        };
 
-    const afterOpenModal = () => {
+        const afterOpenModal = () => {
 
-    }
+        }
 
-    const closeModal = () => {
-      setModalIsOpen(false);
-    };
+        const closeModal = () => {
+          setModalIsOpen(false);
+        };
 
     return(
         <>
@@ -27,7 +27,8 @@ const openModal = () => {
             </a>
             <button
                 class="button header__button"
-                onClick={openModal}>
+                //onClick={openModal}
+                >
                     {props.send}
             </button>
 
