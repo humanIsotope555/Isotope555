@@ -1,4 +1,5 @@
 import {Header, } from '../../components/common/header';
+import {ButtonSend, } from '../../components/button/button_send';
 import {LinkPage, } from '../../components/button/button_link';
 import {Footer, } from '../../components/common/footer';
 import {StatusObjectBlock, } from '../../components/layout-block/status-object-block';
@@ -15,12 +16,15 @@ export const Scrum = (props) => {
 
     const link_proj = <LinkPage class="menu__link" href="#projects"
                                     name="" />
+
+    const button_send = <ButtonSend name="Войти/Регистрация" />
         return(
                 <>
                 <h1>
                     <Header  first_link={link_serv}
                             second_link={link_cost}
-                            third_link={link_proj} />
+                            third_link={link_proj}
+                            />
                </h1>
                 <section class="scrum">
                     <div class="scrum__container fixed-container join-container">

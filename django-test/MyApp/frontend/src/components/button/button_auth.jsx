@@ -1,12 +1,7 @@
-export const ButtonSend = (props) => {
-    return(
+export const ButtonAuth = () => (
         <>
             <button class={props.class} >
                 {props.name}
             </button>
         </>
     )
-
-}
-
-

@@ -2,7 +2,7 @@ import {MailSend, } from '../../components/modal/mail';
 import {LinkPage, } from '../../components/button/button_link';
 import Modal from 'react-modal';
 import React, {useState} from 'react';
-
+import {HeaderRightBar, } from '../menu/right-bar';
 export const Header = (props) => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -21,7 +21,8 @@ export const Header = (props) => {
 
 
 
-    return( <>
+    return(
+        <>
         <header class="header">
             <div class="header-container fixed-container join-container">
                 <nav class="menu header__menu ">
@@ -63,30 +64,7 @@ export const Header = (props) => {
 
                     </ul>
                 </nav>
-                <div class="header__right-bar">
-
-                    <div class="call header__call">
-                        <a class ="number header__number" href="tel:+">
-                            [ Телефон ]
-                        </a>
-                        <button
-                            class="button header__button"
-                            onClick={openModal}>
-                                Заказать звонок
-                        </button>
-
-                        <Modal
-                            isOpen={modalIsOpen}
-                            onRequestClose={closeModal}
-                            onAfterOpen={afterOpenModal}
-                            >
-
-                            <MailSend />
-
-                        </Modal>
-
-                    </div>
-                </div>
+                <HeaderRightBar />
             </div>
         </header>
 
