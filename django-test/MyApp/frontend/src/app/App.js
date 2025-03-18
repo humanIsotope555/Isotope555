@@ -3,6 +3,9 @@ import logo from '../theme/logo.svg';
 import '../theme/App.css';
 import axios from 'axios';
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
+import {connect, } from 'react-redux';
+import {store, } from '../store/configureStore';
+import {getUsers, } from '../actions/getUsers';
 import {Main,  } from '../components/site/main';
 import {Scrum, } from '../components/site/scrum';
 import {Blog, } from '../components/site/blog';
@@ -11,9 +14,8 @@ import {RegExp, } from '../components/site/regexp';
 import {Trainer, } from '../components/site/templates/trainer';
 import {Post, } from '../components/site/templates/post';
 import {Manual, } from '../components/site/manual';
-
-import '../api/csrf-token'
-
+import {getCookie, } from '../api/csrf-token.js';
+import {apiService, } from'../api/api.js';
 
 var arr = []
 
@@ -42,7 +44,7 @@ class App extends Component {
                 <Route path="blog" element={<Blog />} />
                     <Route path="article/:id" element={<Post />} />
                 <Route path="regexp" element={<RegExp />} />
-                    <Route path="task/:id" element={<Trainer />} />
+                    <Route path="task/:id" element={<Trainer store={store} getUsers={getUsers}/>} />
 
                     <Route path="manual/:id" element={<Manual />} />
                 <Route path="chatbot" element={<ChatBot />} />
@@ -56,4 +58,18 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (store) => {
+    console.log(store)
+    return {user: store.user}
+};
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {getUsersAction: (user) => dispatch(getUsers(user))}
+}
+
+export default connect(
+mapStateToProps,
+mapDispatchToProps
+)(App);
+//export default App;

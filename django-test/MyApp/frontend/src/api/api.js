@@ -1,18 +1,24 @@
+import $ from 'jquery';
+import React, {Component, useState, useEffect, } from 'react';
 import axios from 'axios';
+import getCookie from './csrf-token';
 
-function apiService(endpoint) {
-        let response =  fetch(endpoint)
-        const posts =  response.json()
-        return posts
+
+const csrftoken = getCookie;
+
+const data = 2;
+function apiService() {
+        let response = fetch('http://127.0.0.1:8000/trainer/requests/1', {
+            method: 'POST',
+            headers: {'X-CSRFToken': csrftoken},
+            body: data
+        })
+        const post =  response.json
+        return post
     }
 
-export default {
-
-    getListPosts(){
-        let endpoint = 'http://127.0.0.1:8000/blog/requests/';
-        return apiService(endpoint);
-    }
-
+function getData(endpoint){
+    return apiService(endpoint);
 }
 
 /*

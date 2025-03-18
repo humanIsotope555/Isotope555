@@ -9,7 +9,8 @@ import {RegExpBlock, } from '../../../components/layout-block/send-regexp-block'
 import {AnswerBlock, } from '../../../components/layout-block/get-regexp-block'
 
 import React, {useState, useEffect, } from 'react';
-import SnackbarProvider from 'react-simple-snackbar'
+
+
 import  '../../../theme/css/regexp/style-trainer-compile.css';
 
 async function getTask(id) {
@@ -21,6 +22,8 @@ async function getTask(id) {
 export const Trainer = (props) => {
 
     const currentID = window.location.href.split('/')[4];
+    console.log('test', props.store.getState().user.name)
+    console.log(props.getUsers())
     console.log(getTask(currentID))
 
 
@@ -70,11 +73,11 @@ export const Trainer = (props) => {
                             <h1>Задание</h1>
                             <h3>{task.task}</h3>
                         </div>
-                        <SnackbarProvider>
+
                             <SendMessage  childComponent={<RegExpBlock
                                                             setCount={setCount}
                                                             exercise={getTask(currentID)}/>} />
-                        </SnackbarProvider>
+
                     </div>
 
                     <div class="compiler__right-block">

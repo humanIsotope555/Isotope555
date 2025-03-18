@@ -3,16 +3,18 @@ import {ButtonScrum, } from '../../../components/button/button_scrum';
 import {ButtonMainLink, } from '../../../components/button/button_main_link';
 
 
-export const Base = () => (
+export const Base = (props) => (
+
     <>
 
         <section class="main">
+
             <button_send_mail />
             <div class="main__container fixed-container join-container">
                 <div class="main__myinfo">
                     <h1 class="main__name">Заголовок</h1>
                     <p class="main__prof">Что-то...</p>
-
+                    {}
                     <div class="main__info">
                         <ButtonSend class="button main__more" name="Узнать больше" />
                         <ButtonMainLink class="button main__menu-link"

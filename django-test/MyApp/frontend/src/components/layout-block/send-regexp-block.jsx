@@ -1,33 +1,15 @@
 import $ from 'jquery';
 import getCookie from '../../api/csrf-token'
-
 import React, {Component, useState, useEffect, } from 'react';
 
 
-import { useSnackbar,  } from 'react-simple-snackbar'
-
 export const RegExpBlock = (props) => {
-    const [openSnackbar, closeSnackbar] = useSnackbar(
-        {
-                position: 'bottom-right',
-                style: {
 
-                    }
-            }
-        )
     const setCount = props.setCount
     const count = props.count
     const exercise = props.exercise
 
     const csrftoken = getCookie;
-
-
-
-    function handleSubmit(event) {
-
-        event.preventDefault();
-        return count;
-  }
 
   async function sendRegexp() {
         let response = await fetch(`http://127.0.0.1:8000/`, {
@@ -96,6 +78,7 @@ export const RegExpBlock = (props) => {
                                      value={count}
                                      onChange={(e) => setCount(e.target.value)}
                                     ></textarea>
+
                         <button id="send_regexp" class="button button-compile"
  /*onClick={() => openSnackbar('Отправленно')}*/
                             >
