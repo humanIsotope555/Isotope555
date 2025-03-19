@@ -25,12 +25,8 @@ export const HeaderRightBar = (props) => {
             <a class ="number header__number" href="tel:+">
                 {props.label}
             </a>
-            <button
-                class="button header__button"
-                //onClick={openModal}
-                >
                     {props.send}
-            </button>
+
 
             <Modal
                 isOpen={modalIsOpen}
