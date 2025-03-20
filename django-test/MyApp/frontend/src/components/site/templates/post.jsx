@@ -39,7 +39,7 @@ export const Post = (props) => {
             setPost(post_)
             setLoading(false)
         }).catch(error => {
-            alert('Ошибка запроса')
+
         })
     }, [])
 
@@ -75,7 +75,7 @@ export const Post = (props) => {
                                     <div class="other info__other">
 
                                         <span class="date other__date">
-                                            {post[1][0]}
+                                            {post[1]}
                                         </span>
                                     </div>
 
