@@ -1,7 +1,7 @@
 import {Header, } from '../../components/common/header';
 import {LinkPage, } from '../../components/button/button_link';
 import {ButtonSend, } from '../../components/button/button_send';
-
+import { fetchProducts } from "../../actions/fetchData";
 import {Footer, } from '../../components/common/footer';
 
 //import {Post, } from './templates/base';
@@ -11,7 +11,7 @@ import {Article, } from '../item/article';
 import '../../theme/css/styles.css';
 import '../../theme/css/blog/style-blog.css';
 import '../../theme/css/blog/style-articles-list.css';
-
+import {connect, useDispatch} from 'react-redux';
 import React, { Component, useState, useEffect } from 'react';
 
     async function getList() {
@@ -26,9 +26,10 @@ const NoListResult = ({title}) => {
         )
    }
 
-const BuildPage = () => {
+const BuildPage = (props) => {
     const [loading, setLoading] = useState(true)
     const [posts, setPosts] = useState([])
+ const dispatch = useDispatch()
 
     useEffect(() => {
         getList().then(posts_ => {
@@ -69,6 +70,7 @@ const BuildPage = () => {
 // console.log(posts)
 
     return(
+
         <>
             <Header first_link={link_serv}
                    second_link={link_cost}
@@ -100,4 +102,4 @@ const BuildPage = () => {
     )
 }
 
-export const Blog = () => BuildPage();
+export const Blog = (props) => BuildPage(props);

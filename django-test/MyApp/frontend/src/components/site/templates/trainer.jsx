@@ -22,8 +22,6 @@ async function getTask(id) {
 export const Trainer = (props) => {
 
     const currentID = window.location.href.split('/')[4];
-    console.log('test', props.store.getState().user.name)
-    console.log(props.getUsers())
     console.log(getTask(currentID))
 
 
