@@ -29,7 +29,7 @@ const NoListResult = ({title}) => {
 const BuildPage = (props) => {
     const [loading, setLoading] = useState(true)
     const [posts, setPosts] = useState([])
- const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         getList().then(posts_ => {
